@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-# resolving addresses
-echo "127.0.0.2 localhost" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
+# a back up file , resolving addresses
+cp /etc/hosts.bak /etc/hosts
+cat <<EOF > /etc/hosts
+127.0.0.2 localhost
+8.8.8.8 facebook.com
+EOF
